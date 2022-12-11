@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def getdata(filename):
+def getelectdata(filename):
     '''
     
 
@@ -41,7 +41,7 @@ def getdata(filename):
 countries = ['Australia','France','United States', 'Ireland']
 
 #For Piechart
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('SP.POP.GROW')]
 print(df2)
 
@@ -73,7 +73,7 @@ plt.show()
 
 #For Barplot
 
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.USE.ELEC.KH.PC')]
 df2.dropna()
 print(df2)
@@ -101,7 +101,7 @@ plt.show()
 
 
 #for Lineplot
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.ELC.RNEW.ZS')]
 
 plt.figure()
@@ -116,7 +116,7 @@ plt.show()
 
 # Line plot2
 #for Lineplot
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.ELC.PETR.ZS')]
 
 plt.figure()
@@ -126,7 +126,7 @@ plt.ylabel('% of total')
 plt.show()
 #####
 ###line plot3
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.ELC.NUCL.ZS')]
 
 plt.figure()
@@ -135,7 +135,7 @@ df2.plot("Years", countries, title='Electricity production from nuclear sources 
 plt.ylabel('% of total')
 plt.show()
 ########################
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.ELC.COAL.ZS')]
 
 plt.figure()
@@ -145,7 +145,7 @@ plt.legend(loc='lower left',bbox_to_anchor=(1,0.5))
 plt.ylabel('% of total')
 plt.show()
 ##################################
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EG.ELC.NGAS.ZS')]
 
 plt.figure()
@@ -156,7 +156,7 @@ plt.ylabel('% of total')
 plt.show()
 
 ####
-df, df2 = getdata('API_19_DS2_en_csv_v2_4700503.csv')
+df, df2 = getelectdata('API_19_DS2_en_csv_v2_4700503.csv')
 df2 = df2.loc[df2['Indicator Code'].eq('EN.ATM.CO2E.PC')]
 
 plt.figure()
